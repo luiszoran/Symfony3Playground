@@ -1,1 +1,30 @@
-{{ texto }}
+{% extends ":default:layout.html.twig" %}
+{% block container %}
+    {# COMENTARIO
+        MAS
+        LINEAS
+    #}
+    {{ parent() }}
+    {{ texto }}
+
+    <hr/>
+    {% if productos|length > 0 %}
+
+    <ul>
+        {% for producto in productos %}
+            <li> {{ producto.producto }} - {{ producto.precio }}</li>
+        {% endfor %}
+    </ul>
+
+    {%  endif %}
+
+    </hr>
+
+    {% set fecha = date("-2 days", "Europe/Madrid") %}
+    {{ dump(fecha) }}
+
+    </hr>
+
+    {{ include("AppBundle:pruebas:partial.html.twig") }}
+
+{% endblock %}
