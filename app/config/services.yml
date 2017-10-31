@@ -33,3 +33,15 @@ services:
     # AppBundle\Service\ExampleService:
     #     arguments:
     #         $someArgument: 'some_value'
+
+    app.twig_extension:
+      class: AppBundle\Twig\HelperVistas
+      public: true
+      tags:
+        - { name: twig.extension }
+
+    app.twig_extension_filter:
+      class: AppBundle\Twig\FilterVistas
+      public: true
+      tags:
+        - { name: twig.extension }

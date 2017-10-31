@@ -27,4 +27,11 @@
 
     {{ include("AppBundle:pruebas:partial.html.twig") }}
 
+    </hr>
+
+    {{ generateTable(3,3)|raw }}
+
+    </hr>
+
+    {{ "test" | addText('texto') }}
 {% endblock %}
