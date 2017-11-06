@@ -42,3 +42,11 @@ pruebas_queryBuilder:
 pruebas_queryThroughRepo:
   path: /pruebas/queryThroughRepo
   defaults: {_controller: AppBundle:Pruebas:queryThroughRepo }
+
+pruebas_form:
+  path: /pruebas/form
+  defaults: {_controller: AppBundle:Pruebas:form }
+
+pruebas_validarEmail:
+  path: /pruebas/validarEmail/{email}
+  defaults: {_controller: AppBundle:Pruebas:validarEmail }
