@@ -14,3 +14,31 @@ pruebas_create:
 pruebas_read:
   path: /pruebas/read
   defaults: {_controller: AppBundle:Pruebas:read }
+
+pruebas_update:
+  path: /pruebas/update/{id}/{titulo}/{descripcion}/{precio}
+  defaults: {_controller: AppBundle:Pruebas:update }
+
+pruebas_delete:
+  path: /pruebas/delete/{id}
+  defaults: {_controller: AppBundle:Pruebas:delete }
+
+pruebas_findByPrice:
+  path: /pruebas/findByPrice/{precio}
+  defaults: {_controller: AppBundle:Pruebas:findByPrice }
+
+pruebas_nativePrice:
+  path: /pruebas/native
+  defaults: {_controller: AppBundle:Pruebas:nativeSql }
+
+pruebas_nativeDql:
+  path: /pruebas/nativeDql
+  defaults: {_controller: AppBundle:Pruebas:nativeDql }
+
+pruebas_queryBuilder:
+  path: /pruebas/queryBuilder
+  defaults: {_controller: AppBundle:Pruebas:queryBuilder }
+
+pruebas_queryThroughRepo:
+  path: /pruebas/queryThroughRepo
+  defaults: {_controller: AppBundle:Pruebas:queryThroughRepo }
